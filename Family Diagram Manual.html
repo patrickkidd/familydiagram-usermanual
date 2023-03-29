@@ -1,0 +1,1284 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+<title>Family Diagram Manual</title>
+
+
+<style type="text/css">
+body {
+  font-family: Helvetica, arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.6;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  background-color: white;
+  padding: 30px; }
+
+body > *:first-child {
+  margin-top: 0 !important; }
+body > *:last-child {
+  margin-bottom: 0 !important; }
+
+a {
+  color: #4183C4; }
+a.absent {
+  color: #cc0000; }
+a.anchor {
+  display: block;
+  padding-left: 30px;
+  margin-left: -30px;
+  cursor: pointer;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0; }
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 20px 0 10px;
+  padding: 0;
+  font-weight: bold;
+  -webkit-font-smoothing: antialiased;
+  cursor: text;
+  position: relative; }
+
+h1:hover a.anchor, h2:hover a.anchor, h3:hover a.anchor, h4:hover a.anchor, h5:hover a.anchor, h6:hover a.anchor {
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAA09pVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoMTMuMCAyMDEyMDMwNS5tLjQxNSAyMDEyLzAzLzA1OjIxOjAwOjAwKSAgKE1hY2ludG9zaCkiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6OUM2NjlDQjI4ODBGMTFFMTg1ODlEODNERDJBRjUwQTQiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6OUM2NjlDQjM4ODBGMTFFMTg1ODlEODNERDJBRjUwQTQiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo5QzY2OUNCMDg4MEYxMUUxODU4OUQ4M0REMkFGNTBBNCIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo5QzY2OUNCMTg4MEYxMUUxODU4OUQ4M0REMkFGNTBBNCIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PsQhXeAAAABfSURBVHjaYvz//z8DJYCRUgMYQAbAMBQIAvEqkBQWXI6sHqwHiwG70TTBxGaiWwjCTGgOUgJiF1J8wMRAIUA34B4Q76HUBelAfJYSA0CuMIEaRP8wGIkGMA54bgQIMACAmkXJi0hKJQAAAABJRU5ErkJggg==) no-repeat 10px center;
+  text-decoration: none; }
+
+h1 tt, h1 code {
+  font-size: inherit; }
+
+h2 tt, h2 code {
+  font-size: inherit; }
+
+h3 tt, h3 code {
+  font-size: inherit; }
+
+h4 tt, h4 code {
+  font-size: inherit; }
+
+h5 tt, h5 code {
+  font-size: inherit; }
+
+h6 tt, h6 code {
+  font-size: inherit; }
+
+h1 {
+  font-size: 28px;
+  color: black; }
+
+h2 {
+  font-size: 24px;
+  border-bottom: 1px solid #cccccc;
+  color: black; }
+
+h3 {
+  font-size: 18px; }
+
+h4 {
+  font-size: 16px; }
+
+h5 {
+  font-size: 14px; }
+
+h6 {
+  color: #777777;
+  font-size: 14px; }
+
+p, blockquote, ul, ol, dl, li, table, pre {
+  margin: 15px 0; }
+
+hr {
+  background: transparent url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAYAAAAECAYAAACtBE5DAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMC1jMDYwIDYxLjEzNDc3NywgMjAxMC8wMi8xMi0xNzozMjowMCAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNSBNYWNpbnRvc2giIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6OENDRjNBN0E2NTZBMTFFMEI3QjRBODM4NzJDMjlGNDgiIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6OENDRjNBN0I2NTZBMTFFMEI3QjRBODM4NzJDMjlGNDgiPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDo4Q0NGM0E3ODY1NkExMUUwQjdCNEE4Mzg3MkMyOUY0OCIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDo4Q0NGM0E3OTY1NkExMUUwQjdCNEE4Mzg3MkMyOUY0OCIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/PqqezsUAAAAfSURBVHjaYmRABcYwBiM2QSA4y4hNEKYDQxAEAAIMAHNGAzhkPOlYAAAAAElFTkSuQmCC) repeat-x 0 0;
+  border: 0 none;
+  color: #cccccc;
+  height: 4px;
+  padding: 0;
+}
+
+body > h2:first-child {
+  margin-top: 0;
+  padding-top: 0; }
+body > h1:first-child {
+  margin-top: 0;
+  padding-top: 0; }
+  body > h1:first-child + h2 {
+    margin-top: 0;
+    padding-top: 0; }
+body > h3:first-child, body > h4:first-child, body > h5:first-child, body > h6:first-child {
+  margin-top: 0;
+  padding-top: 0; }
+
+a:first-child h1, a:first-child h2, a:first-child h3, a:first-child h4, a:first-child h5, a:first-child h6 {
+  margin-top: 0;
+  padding-top: 0; }
+
+h1 p, h2 p, h3 p, h4 p, h5 p, h6 p {
+  margin-top: 0; }
+
+li p.first {
+  display: inline-block; }
+li {
+  margin: 0; }
+ul, ol {
+  padding-left: 30px; }
+
+ul :first-child, ol :first-child {
+  margin-top: 0; }
+
+dl {
+  padding: 0; }
+  dl dt {
+    font-size: 14px;
+    font-weight: bold;
+    font-style: italic;
+    padding: 0;
+    margin: 15px 0 5px; }
+    dl dt:first-child {
+      padding: 0; }
+    dl dt > :first-child {
+      margin-top: 0; }
+    dl dt > :last-child {
+      margin-bottom: 0; }
+  dl dd {
+    margin: 0 0 15px;
+    padding: 0 15px; }
+    dl dd > :first-child {
+      margin-top: 0; }
+    dl dd > :last-child {
+      margin-bottom: 0; }
+
+blockquote {
+  border-left: 4px solid #dddddd;
+  padding: 0 15px;
+  color: #777777; }
+  blockquote > :first-child {
+    margin-top: 0; }
+  blockquote > :last-child {
+    margin-bottom: 0; }
+
+table {
+  padding: 0;border-collapse: collapse; }
+  table tr {
+    border-top: 1px solid #cccccc;
+    background-color: white;
+    margin: 0;
+    padding: 0; }
+    table tr:nth-child(2n) {
+      background-color: #f8f8f8; }
+    table tr th {
+      font-weight: bold;
+      border: 1px solid #cccccc;
+      margin: 0;
+      padding: 6px 13px; }
+    table tr td {
+      border: 1px solid #cccccc;
+      margin: 0;
+      padding: 6px 13px; }
+    table tr th :first-child, table tr td :first-child {
+      margin-top: 0; }
+    table tr th :last-child, table tr td :last-child {
+      margin-bottom: 0; }
+
+img {
+  max-width: 100%; }
+
+span.frame {
+  display: block;
+  overflow: hidden; }
+  span.frame > span {
+    border: 1px solid #dddddd;
+    display: block;
+    float: left;
+    overflow: hidden;
+    margin: 13px 0 0;
+    padding: 7px;
+    width: auto; }
+  span.frame span img {
+    display: block;
+    float: left; }
+  span.frame span span {
+    clear: both;
+    color: #333333;
+    display: block;
+    padding: 5px 0 0; }
+span.align-center {
+  display: block;
+  overflow: hidden;
+  clear: both; }
+  span.align-center > span {
+    display: block;
+    overflow: hidden;
+    margin: 13px auto 0;
+    text-align: center; }
+  span.align-center span img {
+    margin: 0 auto;
+    text-align: center; }
+span.align-right {
+  display: block;
+  overflow: hidden;
+  clear: both; }
+  span.align-right > span {
+    display: block;
+    overflow: hidden;
+    margin: 13px 0 0;
+    text-align: right; }
+  span.align-right span img {
+    margin: 0;
+    text-align: right; }
+span.float-left {
+  display: block;
+  margin-right: 13px;
+  overflow: hidden;
+  float: left; }
+  span.float-left span {
+    margin: 13px 0 0; }
+span.float-right {
+  display: block;
+  margin-left: 13px;
+  overflow: hidden;
+  float: right; }
+  span.float-right > span {
+    display: block;
+    overflow: hidden;
+    margin: 13px auto 0;
+    text-align: right; }
+
+code, tt {
+  margin: 0 2px;
+  padding: 0 5px;
+  white-space: nowrap;
+  border: 1px solid #eaeaea;
+  background-color: #f8f8f8;
+  border-radius: 3px; }
+
+pre code {
+  margin: 0;
+  padding: 0;
+  white-space: pre;
+  border: none;
+  background: transparent; }
+
+.highlight pre {
+  background-color: #f8f8f8;
+  border: 1px solid #cccccc;
+  font-size: 13px;
+  line-height: 19px;
+  overflow: auto;
+  padding: 6px 10px;
+  border-radius: 3px; }
+
+pre {
+  background-color: #f8f8f8;
+  border: 1px solid #cccccc;
+  font-size: 13px;
+  line-height: 19px;
+  overflow: auto;
+  padding: 6px 10px;
+  border-radius: 3px; }
+  pre code, pre tt {
+    background-color: transparent;
+    border: none; }
+
+sup {
+    font-size: 0.83em;
+    vertical-align: super;
+    line-height: 0;
+}
+
+kbd {
+  display: inline-block;
+  padding: 3px 5px;
+  font-size: 11px;
+  line-height: 10px;
+  color: #555;
+  vertical-align: middle;
+  background-color: #fcfcfc;
+  border: solid 1px #ccc;
+  border-bottom-color: #bbb;
+  border-radius: 3px;
+  box-shadow: inset 0 -1px 0 #bbb
+}
+
+* {
+	-webkit-print-color-adjust: exact;
+}
+@media screen and (min-width: 914px) {
+    body {
+        width: 854px;
+        margin:0 auto;
+    }
+}
+@media print {
+	table, pre {
+		page-break-inside: avoid;
+	}
+	pre {
+		word-wrap: break-word;
+	}
+  body {
+    padding: 2cm; 
+  }
+}
+</style>
+
+<style type="text/css">
+/**
+ * prism.js default theme for JavaScript, CSS and HTML
+ * Based on dabblet (http://dabblet.com)
+ * @author Lea Verou
+ */
+
+code[class*="language-"],
+pre[class*="language-"] {
+	color: black;
+	background: none;
+	text-shadow: 0 1px white;
+	font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
+	text-align: left;
+	white-space: pre;
+	word-spacing: normal;
+	word-break: normal;
+	word-wrap: normal;
+	line-height: 1.5;
+
+	-moz-tab-size: 4;
+	-o-tab-size: 4;
+	tab-size: 4;
+
+	-webkit-hyphens: none;
+	-moz-hyphens: none;
+	-ms-hyphens: none;
+	hyphens: none;
+}
+
+pre[class*="language-"]::-moz-selection, pre[class*="language-"] ::-moz-selection,
+code[class*="language-"]::-moz-selection, code[class*="language-"] ::-moz-selection {
+	text-shadow: none;
+	background: #b3d4fc;
+}
+
+pre[class*="language-"]::selection, pre[class*="language-"] ::selection,
+code[class*="language-"]::selection, code[class*="language-"] ::selection {
+	text-shadow: none;
+	background: #b3d4fc;
+}
+
+@media print {
+	code[class*="language-"],
+	pre[class*="language-"] {
+		text-shadow: none;
+	}
+}
+
+/* Code blocks */
+pre[class*="language-"] {
+	padding: 1em;
+	margin: .5em 0;
+	overflow: auto;
+}
+
+:not(pre) > code[class*="language-"],
+pre[class*="language-"] {
+	background: #f5f2f0;
+}
+
+/* Inline code */
+:not(pre) > code[class*="language-"] {
+	padding: .1em;
+	border-radius: .3em;
+	white-space: normal;
+}
+
+.token.comment,
+.token.prolog,
+.token.doctype,
+.token.cdata {
+	color: slategray;
+}
+
+.token.punctuation {
+	color: #999;
+}
+
+.namespace {
+	opacity: .7;
+}
+
+.token.property,
+.token.tag,
+.token.boolean,
+.token.number,
+.token.constant,
+.token.symbol,
+.token.deleted {
+	color: #905;
+}
+
+.token.selector,
+.token.attr-name,
+.token.string,
+.token.char,
+.token.builtin,
+.token.inserted {
+	color: #690;
+}
+
+.token.operator,
+.token.entity,
+.token.url,
+.language-css .token.string,
+.style .token.string {
+	color: #a67f59;
+	background: hsla(0, 0%, 100%, .5);
+}
+
+.token.atrule,
+.token.attr-value,
+.token.keyword {
+	color: #07a;
+}
+
+.token.function {
+	color: #DD4A68;
+}
+
+.token.regex,
+.token.important,
+.token.variable {
+	color: #e90;
+}
+
+.token.important,
+.token.bold {
+	font-weight: bold;
+}
+.token.italic {
+	font-style: italic;
+}
+
+.token.entity {
+	cursor: help;
+}
+</style>
+
+
+</head>
+
+<body>
+
+<script type="text/javascript">
+if(location.href.indexOf('file:///') != 0) {
+
+    var script = document.createElement('script');
+    script.setAttribute('src', "https://www.google-analytics.com/analytics.js");
+    script.setAttribute('async', '');
+    document.head.append(script);
+    
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+      ga('create', 'UA-12029378-7', 'auto');
+      ga('send', 'pageview');
+}
+</script>
+
+<style>
+li ul {
+    margin: 0;
+}
+blockquote {
+    font-size: .9em;
+    font-style: italic;
+}
+.last-modified {
+    color: grey;
+    font-size: .85em;
+}
+</style>
+
+<script type="text/javascript" src="jquery-3.3.1.min.js"></script>
+
+<script type="text/javascript" src="manual.js"></script>
+
+<div id="title">
+    <strong style="font-size: 2.5em;">Family Diagram User Manual</strong>
+</div>
+
+<blockquote>
+<p>The family diagram is an outgrowth of family systems theory. The information contained on a family diagram is meaningless without a thorough understanding of the principles that govern emotional systems. The diagram reflects the ebb and flow of emotional process through the generations. It defines the vicissitudes of a living organism, the multigenerational family. (Kerr &amp; Bowen, 1988, p. 306)</p>
+</blockquote>
+
+<p><em>Family Diagram</em> makes it easier to learn about the functioning of a human family as an integrated, biological unit. Geneology tracks structure, or what the family <em>is</em>. A family diagram tracks geneology but also tracks the family&#39;s function, or what the family <em>does</em>. <em>Family Diagram</em> is organized around an effort to &quot;differentiate a self,&quot; or mature ones own functioning in important relationships. Differentiation is a concept from Bowen theory. Making the most of <em>Family Diagram</em> requires a working knowledge of theory or a coach who has been trained in the application of Bowen theory.</p>
+
+<p>Differentiation is not a quick-fix for human problems. It is an ongoing effort to improve the manner in which a person functions in their most important relationships. An effort at differentiation only works when the effort is to change self. It is an effort best undertaken under the guidance of an experienced coach. It requires research into one&#39;s own family in order to better &quot;see&quot; facts about how the multigenerational family system functions. The perennial question in Bowen theory is: How does one see what has been right in front of one&#39;s eyes all along?</p>
+
+<p>Observations from family research through the decades suggests that an effort to grow up in one&#39;s own family of origin automatically translates to spousal, parental, professional, and social contexts. For that it is necessary to understand how a family&#39;s basic patterns of managing stress change as stress increases. This requires tracking the automatic reactions of individuals to important events in the family&#39;s history, and how these reactions automatically impact the reactions of others.</p>
+
+<p>&quot;Automatic&quot; reactions are actions that occur regardless of a person&#39;s desires. This definition of the term &quot;automatic,&quot; as that which occurs regardless of a person&#39;s desires, could also be used for the term &quot;natural.&quot; Differentiation of self is the process of encountering one&#39;s  behavior as a part of the natural world. It is the effort to discover and stand up to forces far older than human culture and probably far older than the human species. Bowen theory attempts to describe the aspect of human behavior that is automatic. Bowen theory is a theory of natural systems.</p>
+
+<p>Like any scientific theory, Bowen theory provides a guide for what facts to look for in the research effort. The theory can also provide a way to interpret the facts and make hypothetical predictions about the outcomes of actions. Just like any rigorous research effort, the researcher must experiment and verify those predictions for themselves.</p>
+
+<p>The &quot;facts&quot; of family functioning described in Bowen theory are predictable interactions that occur between people in all families in response to changes in anxiety levels. The reactions that Bowen theory describes are almost entirely automatic. This means that they are outside of awareness, at least at first. Tracking the facts of family functioning through time can make these reactive patterns as plain as day. Eventually one&#39;s own part in them becomes clearer. Once one&#39;s own part in them is clear enough, it can be changed.</p>
+
+<p>But this takes work. The app can only assist in this effort. The work is up to you.</p>
+
+<p>Aside from guiding a the collection of data for a research question, any scientific theory also stands to be disproven. Good science aims to disprove, and not prove, a hunch. Does the family actually adapt to stress in the manner that one assumes? What is the evidence supporting an understanding of one&#39;s own role in that family adaptive process? How might one&#39;s assumptions about family inform predictions about individual behavior? How inaccurate might these assumptions be? How would one know if the predictions were inaccurate? Time, experimentation, and coaching are all essential for the effort at getting clear about what one knows and what one does not know about self and relationship.</p>
+
+<p>This user manual is meant to help you use the app in an effort to differentiate a self. It does not describe Bowen theory and its eight concepts, of which knowledge is required to make the most use of <em>Family Diagram</em>. More information on the Bowen theory can be found using the following two links:</p>
+
+<ul>
+<li><a href="http://thebowencenter.org/theory/">Theory - The Bowen Center for the Study of the Family</a>.</li>
+<li><a href="http://snowonthedesert.com/annotated-bibliography-of-bowen-literature/">Annotated Bibliography of Bowen Literature for New Students of Theory - Snow on the Desert</a></li>
+<li><em>Ms.Victoria Harrison</em> has <a href="https://www.csnsf.org/the-family-diagram-family-research/">published a guide to creating a family diagram</a>. This book is a good how-to for diagramming family, and a good conceptual companion to this app. Ms. Harrison describes the purpose and process of creating family diagrams in line with Bowen theory, which is organized around an effort at differentiating a self.</li>
+</ul>
+
+<h2 id="toc_0">Table of Contents</h2>
+
+<ul class="toc">
+<li>
+<a href="#toc_0">Table of Contents</a>
+</li>
+<li>
+<a href="#toc_1">Tutorial Video Series</a>
+</li>
+<li>
+<a href="#toc_2">Getting Started</a>
+<ul>
+<li>
+<a href="#toc_3">Registering or Logging In</a>
+</li>
+<li>
+<a href="#toc_4">Managing License and Activations</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="#toc_5">The Basics: File Management</a>
+<ul>
+<li>
+<a href="#toc_6">The File Browser</a>
+</li>
+<li>
+<a href="#toc_7">The Documents Folder</a>
+</li>
+<li>
+<a href="#toc_8">Exporting Diagrams</a>
+</li>
+<li>
+<a href="#toc_9">Importing Diagrams</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="#toc_10">The Basics: Moving around in a Diagram</a>
+<ul>
+<li>
+<a href="#toc_11">Zooming In &amp; Out</a>
+</li>
+<li>
+<a href="#toc_12">Panning Left, Right, Up, Down</a>
+</li>
+<li>
+<a href="#toc_13">Pinch-Zoom Trackpad Gesture</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="#toc_14">Core Principles</a>
+<ul>
+<li>
+<a href="#toc_15">The Family Diagram &quot;Standard&quot;</a>
+</li>
+<li>
+<a href="#toc_16">Time</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="#toc_17">People, Pair-Bonds, and Children</a>
+<ul>
+<li>
+<a href="#toc_18">Editing Item Properties</a>
+<ul>
+<li>
+<a href="#toc_19">Editing Dates</a>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<a href="#toc_20">The Timeline</a>
+<ul>
+<li>
+<a href="#toc_21">The Family Timeline</a>
+<ul>
+<li>
+<a href="#toc_22">Temporal Bounds of Emotional Process</a>
+</li>
+<li>
+<a href="#toc_23">Event Variables</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="#toc_24">The Personal Timeline</a>
+</li>
+<li>
+<a href="#toc_25">The Pair-Bond Timeline</a>
+</li>
+<li>
+<a href="#toc_26">Visual Timeline</a>
+<ul>
+<li>
+<a href="#toc_27">Date Scroller</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="#toc_28">Tracking Variables Through Time</a>
+</li>
+<li>
+<a href="#toc_29">Event Tags</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="#toc_31">Emotional Process Symbols</a>
+<ul>
+<li>
+<a href="#toc_32">When to Add a Symbol, and for What</a>
+</li>
+<li>
+<a href="#toc_33">Types of Emotional Process Symbols</a>
+</li>
+<li>
+<a href="#toc_34">Adding and Editing Emotional Process Symbols</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="#toc_37">Making Presentations</a>
+<ul>
+<li>
+<a href="#toc_38">Diagram Views</a>
+</li>
+<li>
+<a href="#toc_39">Text Callouts</a>
+</li>
+<li>
+<a href="#toc_40">Pencil Drawings</a>
+</li>
+<li>
+<a href="#toc_41">Designing Sub-views using Diagram Views</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="#toc_43">Research Server</a>
+<ul>
+<li>
+<a href="#toc_44">Using the Research Server</a>
+</li>
+<li>
+<a href="#toc_45">Contributing to the Research Server</a>
+</li>
+</ul>
+</li>
+<li>
+<a href="#toc_46">References</a>
+</li>
+<li>
+<a href="#toc_47">Support</a>
+</li>
+</ul>
+
+
+<h2 id="toc_1">Tutorial Video Series</h2>
+
+<p>If you prefer to watch a video tutorial rather than read this manual, you can find a tutorial series here:</p>
+
+<p><a href="https://www.youtube.com/playlist?list=PLsjCsJIbygxo6babV_61xI3mJ_ryU3SVR">Family Diagram Tutorial Videos</a></p>
+
+<h2 id="toc_2">Getting Started</h2>
+
+<p><em>Family Diagram</em> allows you to create one diagram for free. That allows anyone to research their own family or to try out the app before deciding to purchase it. You will need to purchase a license if you want to work on more than one diagram.</p>
+
+<p>In either case, the first step is to create an account before you can use <em>Family Diagram</em>.</p>
+
+<h3 id="toc_3">Registering or Logging In</h3>
+
+<p>You must be logged in to use <em>Family Diagram</em>. Enter your email into the field and click the <em>Next</em> button, as shown in the following dialog:</p>
+
+<p><img src="AccountDialog-1.jpeg" alt=""></p>
+
+<p>If you have already created an account with the email address you entered, you will be asked to enter your password to log in. You will then be taken to your account, as described in the next section.</p>
+
+<p>If you have not already created an account with this email address, an email message will be sent to you with a code that you need to copy and paste (by typing &lt;command&gt;-v) into the box provided:</p>
+
+<p><img src="AccountDialog-2.jpeg" alt=""></p>
+
+<p><img src="AccountDialog-3.jpeg" alt=""></p>
+
+<p>You will then be asked to enter enter your first and last name and a new account password. If you only want to create a free diagram, you may simply click close and start editing. If you want to purchase a professional license, then click &quot;Purchase&quot; on one of the available licenses and enter your credit card information and confirm the purchase. You will recieve an invoice for the purchase via email, and will recieve an additional invoice whenever the subscription automatically renews.</p>
+
+<p><em>NOTE: There are no refunds or pro-rated returns available at this time.</em></p>
+
+<p><img src="AccountDialog-4.jpeg" alt=""></p>
+
+<p>Once you have purchased a license, you will be taken to your account page where you can manage your licenses.</p>
+
+<p>If you already have a license key, you may add it to your account by pasting it into the box entitled <em>Add license by key</em>.</p>
+
+<h3 id="toc_4">Managing License and Activations</h3>
+
+<p>You can manage your licenses on the account page. Each license has a limited number of devices it can be activated on. A device is either a computer, phone, or tablet. You must have at least one license activated on each device you want to use <em>Family Diagram</em> on.</p>
+
+<p><img src="AccountDialog-5.jpeg" alt=""></p>
+
+<p>You can see in the example above that one <em>professional</em> license has been purchased to be billed <em>annually</em>. The subscription will auto-renew on the specified period. The subscription is currently <em>active</em>, and has one activation on a device called &quot;turin.local&quot;. This happens to be the same device that the app is running on, and you can edit the current device&#39;s name to whatever you like.</p>
+
+<p>The license shown is only allowed to be activated on two devices at a time. It currently has one available activation that could be used, for example, on another laptop. If you have run out of activations for a particular license, you must free up one of the activations by deactivating one of the devices for the license.</p>
+
+<p>To do this, just click <em>deactivate</em> for whichever device you want to stop using the app on. Then, go to the device you want to start using the app on, open the app, log in, and click <em>activate</em> on the license you want to use.</p>
+
+<p>If you want to stop paying for a license, click <em>Cancel Subscription</em>. You may continue using the license until the subscription period that you paid for is over.</p>
+
+<p><em>NOTE: There are no refunds or pro-rated returns available at this time.</em></p>
+
+<p>You can click <em>close</em> at any time to start using <em>Family Diagram</em>. However, you must always be logged in. This way of managing licenses and activations allows you to use your account and licenses on as many devices as you like. Just log in, activate a license on the current device, and you are all set.</p>
+
+<h2 id="toc_5">The Basics: File Management</h2>
+
+<p>This section describes the basics for how to handle diagram files, and how to find them on your hard drive.</p>
+
+<p>You can either read this section, or watch it as a tutorial in this video:</p>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/sglIKgi-Sic" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<h3 id="toc_6">The File Browser</h3>
+
+<p>The file browser is shown when <em>Family Diagram</em> starts up. It conveniently lists the files stored in your documents folder. Click once on a file to open it. Once the diagram is open, click the Home button to close the diagram and return to the file browser.</p>
+
+<p>Pull down the file browser list a little to expose the search bar, <em>New</em> button, Sort by date checkbox, and <em>Edit</em> button. You can click the <em>New</em> button to create a new diagram. The diagram is automatically opened for you. You have to click the <em>Edit</em> button to rename or delete a case file. The <em>Edit</em> button acts like a safety to keep from accidentally deleting and renaming files when only trying to open them.</p>
+
+<p><img src="File-Browser.gif" alt=""></p>
+
+<p>You can search for a case by name by typing into the search bar.</p>
+
+<p>It is strongly recommended that you keep regular backups of your diagram files. You can do this by backing up your <em>Documents Folder</em> as described in the next section.</p>
+
+<h3 id="toc_7">The Documents Folder</h3>
+
+<p>The file browser simply lists the diagram files in the <em>Documents Folder</em> a particular folder. When you first start up <em>Family Diagram</em> on a mac, it will ask you if you want to store your diagrams on iCloud Drive or on the local hard drive. If you choose iCloud Drive, your diagrams will be stored in the &quot;Family Diagram&quot; folder under &quot;iCloud Drive&quot; in the macOS Finder. If you choose to store diagrams on your local hard drive, it will default to listing the files in your macOS Documents folder.</p>
+
+<p>You can change the folder that the file browser uses to list your diagrams in the preferences. Click the File menu, and then Preferences to open the preferences dialog. There you will find an option to toggle between iCloud Drive if you are logged into iCloud and have iCloud drive enabled (most people do), and a folder on your local hard drive. If you choose to store diagrams on your local hard drive, you have the option to change the folder used to any folder on your computer.</p>
+
+<p>For simplicity, it is recommended that you store all of your diagrams in a single folder and that you set the file browser to use that folder. You can use the search bar at the top of the file browser to narrow the list and easily find one particular diagram.</p>
+
+<h3 id="toc_8">Exporting Diagrams</h3>
+
+<p>Diagrams are stored with the .fd extension. As with many applications such as Apple Pages, Keynote, and iMovie, these .fd files are macOS file bundles. That means you will have to compress  the .fd files into a zip file before you email them to another person.</p>
+
+<p>You also have the option to export diagrams as a JPEG with a white background, a PNG with a transparent background for including in presentations, or a PDF with a white background.</p>
+
+<p>You can also print diagrams to your local printer. If you don&#39;t like <em>Family Diagram</em> formats diagrams for printing, you can export the diagram as a JPEG and then format it however you want.</p>
+
+<h3 id="toc_9">Importing Diagrams</h3>
+
+<p>The free version allows you to edit only one diagram at a time. It will not save your one free diagram to a file outside the app. However, the free version will import a diagram created by someone with a professional subscription.</p>
+
+<p>Importing a diagram will overwrite any changes you have made previously to your one free diagram. You can do this as many times as you like. This makes it possible for a coach with a professional subscription to start a family diagram and then send it to a client who is using the free version. The free version will not save a diagram file outside the application, so it is not possible to send any changes back to the coach.</p>
+
+<p>You can do this with <code>File -&gt; Import diagram...</code> from the menu bar. This option is disabled for a professional subscription because a professional subscription does not restrict editing to one free diagram.</p>
+
+<h2 id="toc_10">The Basics: Moving around in a Diagram</h2>
+
+<p>Every user needs to know the basics about navigating around in the diagram. You may end up with many nuclear families that are much smaller than the primary nuclear family in the diagram. You will want to be able to zoom into those smaller families to see their names and arrange them properly.</p>
+
+<p>A few key tips will help you move around in your diagram using your keyboard and mouse/trackpad.</p>
+
+<h3 id="toc_11">Zooming In &amp; Out</h3>
+
+<p>To zoom into a diagram, hold down the <code>Option</code> key on macOS (<code>Alt</code> on Windows) while scrolling up and down using your mouse wheel. If you have a trackpad instead of a mouse, the scroll gesture is typically moving two fingers up or down on the trackpad.</p>
+
+<p>You can also zoom into and out of the mouse cursor by pinching with a trackpad.</p>
+
+<h3 id="toc_12">Panning Left, Right, Up, Down</h3>
+
+<p>When you zoom into one part of the diagram, you will notice that much of the diagram ends up off the screen. To access these areas you have to pan left, right, up, and down. To do this, hold down the <code>Option</code> key on macOS (<code>Alt</code> on Windows) while clicking and dragging anywhere on the diagram.</p>
+
+<p>You can also pan by using the mouse wheel or trackpad. You can scroll using a trackpad by swiping with two fingers in the direction you want to pan.</p>
+
+<h3 id="toc_13">Pinch-Zoom Trackpad Gesture</h3>
+
+<p>If you choose, you can simultaneously zoom and pan using a pinch and drag gesture on a trackpad. To enable this gesture, go into <code>Family Diagram -&gt; Preferences...</code> and check the checkbox <code>Enable Pinch Pan-Zoom</code>.</p>
+
+<h2 id="toc_14">Core Principles</h2>
+
+<p>The basic principles of <em>Family Diagram</em> are described in this section. First principles are important for learning how to think about family diagrams in a new way.</p>
+
+<h3 id="toc_15">The Family Diagram &quot;Standard&quot;</h3>
+
+<p><em>Family Diagram</em> attempts to enforce a single standard set of symbols for all diagrams. The majority of the symbols have been taken from <em>Michael Kerr&#39;s</em> chapter <em>Family Evaluation</em> in his 1988 book of the same name. Any symbols not covered are derived from the thinking of Vedanā Media.</p>
+
+<p><img src="Tutorial%20Diagram.gif" alt=""></p>
+
+<h3 id="toc_16">Time</h3>
+
+<p>A key principle of the app is that all pertitent data must be placed somewhere in time. This keeps the data collected relatable and coherent. It also enables the key feature of the app, which is to animate emotional process through time.</p>
+
+<p>While basic personal data such as gender and birth-type is stored for each person, most all data is stored in <code>Events</code>. Birth, adoption, death, and other arbitrary events are stored within each person&#39;s own timeline, and marriages, separations, divorces, and geographical moves are stored in each Pair-Bond&#39;s timeline. All events are then automatically combined into a single <code>Timeline</code> for the holistic view.</p>
+
+<h2 id="toc_17">People, Pair-Bonds, and Children</h2>
+
+<p>You can add people, create pair-bonds (i.e. sexual relationships), and add children to Pair-Bonds using the <code>Item Tool Bar</code> on the left side of the window. Here is a legend of basic symbols:</p>
+
+<p><img src="Legend%20Scene.jpg" alt="Family Diagram Legend"></p>
+
+<p>You can add a male or a female by clicking the appropriate button in the <code>Item Tool Bar</code> and then clicking on the diagram. Once you have two people you can create a <code>Pair-Bond</code> relationship between them by clicking the Pair-Bond button and then clicking and dragging from one person to the next to form the bond, like this:</p>
+
+<p><img src="Make%20Pair-Bond.gif" alt=""></p>
+
+<p>You can then add a child to the Pair-Bond by clicking the child button and the dragging from the child to a Pair-Bond like this:</p>
+
+<p><img src="Add%20Child.gif" alt=""></p>
+
+<p>You can also add multiple births by adding a new child to an existing child relationship, like this:</p>
+
+<p><img src="Add%20Twin.gif" alt=""></p>
+
+<p>Here is a video tutorial covering the above section:</p>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/oPlxaelvqng" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<h3 id="toc_18">Editing Item Properties</h3>
+
+<p><a name="editing-properties"></a></p>
+
+<p>You can edit the properties of all items on the diagram, including a people, pair-bonds, child-of symbols, or emotional process symbols. For example, you may to edit a person&#39;s name or birth date, a pair-bond&#39;s marriage, separation, or divorce dates, or an emotional process symbol&#39;s type, start date, or end date.</p>
+
+<p>To edit an item, first select the items you want to edit. Then click the &quot;i&quot; button on the <code>Drawer Tool Bar</code> on the right side of the window. Alternatively, you can use the &quot;Inspect&quot; action in the &quot;Edit&quot; menu (command-i keyboard shortcut) with the item selected to open the item&#39;s properties. There are other keyboard shortcuts to inspect a particular tab in the item&#39;s properties. These shortcuts are available in the <em>View</em> menu and begin with the word &quot;Inspect&quot;.</p>
+
+<p><img src="Edit%20Item%20Properties.gif" alt=""></p>
+
+<p>The &quot;Big Text&quot; checkbox at the bottom of the person and pair-bond properties increases the font size for that item on the diagram. This makes it easier to have some items stand out over others.</p>
+
+<p>The &quot;Diagram Notes&quot; field in the person properties allows you to add arbitrary text to the diagram next to that person.</p>
+
+<p>Here is a video tutorial covering the above section:</p>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/tngJ0lbhMhQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<h4 id="toc_19">Editing Dates</h4>
+
+<p>The date editor offers two different ways to enter dates, either by typing the date in a standard format, or using a visual month, day, and year picker. For best results, be sure to type dates in the <code>mm/dd/yyyy</code> format, being sure to include the slashes.</p>
+
+<p>Clicking the clear button clears the date value to prevent it appearing on the timeline.</p>
+
+<p>The &quot;unsure&quot; box helps you indicate when you don&#39;t know a precise date. This can help you come back and update the date with the precise month and day when you acquire them.</p>
+
+<p>You can close the date editor by clicking anywhere outside of it.</p>
+
+<p><img src="Edit%20Dates.gif" alt=""></p>
+
+<h2 id="toc_20">The Timeline</h2>
+
+<p>The timeline is the core of the Family Diagram app. It allows you to quickly get a holistic view of the changes that the multigenerational family organism goes through. It also is what allows the diagram to be animated which makes it easier to spot events which occur in different parts of the family system on or near the same time.</p>
+
+<p>Here is a video tutorial that covers many of the concepts in this section:</p>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/CkI01mriSBc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+<p>The most basic principle of the timeline is inductive reasoning. You do your best to catalog facts with best effort toward <em>not</em> presuming a relationship between them. In other words, facts are more or less recorded in the timeline separate from each other. Patterns <em>between</em> the facts then emerge as they are viewed from 30,000 feet in the timeline.</p>
+
+<p>A disease or symptom may emerge in one person shortly after the health of another person begins to decline. A wave of problems may reverberate through a several individuals in the two-year period following the death of an important member of the family. A female who had always had trouble concieving may suddenly become pregnant just after learning of her own mother&#39;s cancer diagnosis.</p>
+
+<p>It is easier to be sure that a pattern is occuring when the data is entered without presuming the pattern in the first place. Inductive reasoning can then be imployed to make sense of the disparate facts. Often correlations in time will jump out at a person for the first time even while walking through the timeline with another individual. This is the magic of <em>Family Diagram</em>.</p>
+
+<h3 id="toc_21">The Family Timeline</h3>
+
+<p>The family timeline lists all of the events for everyone in the family. It can be expanded to show additional information for each event, including any custom variables that you add to the diagram.</p>
+
+<p><img src="Family%20Timeline.gif" alt=""></p>
+
+<p>You can edit the dates, descriptions, and other properties of the events listed in the timeline by double-clicking on them and typing in a new value.</p>
+
+<p>Many events are automatically added to the timeline, for example births, deaths, marriages, emotional process start and end dates, and others. You cannot edit the description of these events or change the person(s) they are associated with, but you can edit the dates.</p>
+
+<!--
+#### Temporal Bounds of Emotional Process
+
+An additional column appears to the left of the date column when the timeline is expanded. This column indicates which events pertain to the same emotional process symbol. This is helpful for when you want to scan through the timeline to get a sense of when a particular emotional process began and ended.
+
+Each colored bracket pertains to one emotional process symbol on the diagram. You can change the color used for each emotional process symbol by inspecting that emotional process symbol through the diagram. See [Editing Properties](#editing-properties)
+-->
+
+<h4 id="toc_22">Event Variables</h4>
+
+<p>Choosing what kind of variables to track in the timeline can make it easier to get more objective about emotional process. For example, it may be useful to track changes in different symptoms within a set of people in relation to nodal events. Or, it may make sense to choose a few variables that define progress toward a goal. The app allows you to add your own variables to the timeline so that you can more objectively track change in the emotional system over time. These variables and changes in their values are shown in the diagram so that you can get a holistic view of how things are changing across the system over time.</p>
+
+<p>These custom variables will store whatever value you type into them. You create custom variables by opening the timeline, clicking the &quot;Settings&quot; tab, then editing the list of variables at the top of the settings view. The variables you add will appear as extra columns in the timeline.</p>
+
+<p>The following animation demonstrates adding a new variable and setting a couple of values for it in the timeline:</p>
+
+<p><img src="Adding-Variables.gif" alt=""></p>
+
+<p>Event variables appear in the text details associated with each person on the diagram. A variable is shown in bold when the current date shown on the diagram exactly matches the date of a set value for that variable. For example, if you add a variable called &quot;Weight&quot; and set a value of 189lbs for John on 1/1/1970 in the timeline, then the diagram will show that value in bold when the current date of the diagram is set <em>exactly</em> to 1/1/1970.</p>
+
+<p>Variable values are shown semi-transparent on the diagram when the current date of the diagram does not <em>exactly</em> match the date that a variable value changes. This case is called a variable &quot;steady state.&quot; For example, if you add a variable called &quot;Weight&quot; and set a value of 189lbs for John on 1/1/1970 in the timeline, then that value will show in bold on the diagram when the current date of the diagram is set to 1/1/1975. This implies that the variable is more or less assumed to still be 189lbs on 1/1/1975, because 189lbs was the last known value set for this variable for this person.</p>
+
+<p>You can hide all variables on the diagram by unchecking &quot;Hide Variables on Diagram&quot; in the diagram settings.</p>
+
+<p>You can also choose to hide variable &quot;steady states&quot; by checking &quot;Hide Variable Steady States&quot; in diagram settings. You would choose to do this if you only want to show variable values when they change. For example, it is assumed that a variable with an absolute numerical value like <em>weight</em> will have something of a curve between the known data points.</p>
+
+<p>Steady states might not make sense for other variable types that only have relative value changes. An example where steady states do not make sense might be an &quot;Anxiety&quot; variable for which there is no factual measure that provides an absolute value. However, it may be factual that there was a shift up or shift down in the level of anxiety. In this case, you might only want the changes to the variable to show on the diagram. This is useful when using the discrete <code>Next Event</code> and <code>Previous Event</code> actions in the <code>View</code> menu or left/right arrows on either side of the bottom graphical timeline. These actions jump between discrete changes in the diagram, including births, deaths, pair-bond events, emotional process symbols, and variable changes.</p>
+
+<p>A comprehensive elaboration on the example above may illustrate this rather sophisticated feature:</p>
+
+<p>Assume a variable &quot;weight.&quot; Assume also that John has only two events in the timeline where this value changes; 189lbs on 1/1/1970, and 183lbs on 1/1/1980. The current date shown on the diagram determines how and when the <em>weight</em> variable is displayed for John. So, the &quot;weight&quot; variable will be:</p>
+
+<ul>
+<li>Not shown prior to 1/1/1970, because there is no value set prior to this date.</li>
+<li>Shown in bold on 1/1/1970, because the variable changes to 189lbs right on this day.</li>
+<li>Shown in semi-transparent color for dates between 1/1/1970 and 1/1/1980. However, if &quot;Hide Variable Steady States&quot; is checked then the weight variable will not be shown at all for this date range for John.</li>
+<li>Shown in bold on 1/1/1970, because the variable changes to 183lbs right on this day.</li>
+<li>Shown in semi-transparent color for dates after 1/1/1980, or if &quot;Hide Variable Steady States&quot; is checked then the weight will not be shown at all for dates after 1/1/1980 for John.</li>
+</ul>
+
+<p>This example is illustrated in the following animation:</p>
+
+<p><img src="Variables-on-Diagram.gif" alt=""></p>
+
+<h3 id="toc_23">The Personal Timeline</h3>
+
+<p>The personal timeline lists all of the events for the person that is currently being edited. It contains all the same features as the family timeline, except that it only shows events for that particular person.</p>
+
+<p>You are certainly free to add any kind of events to any timeline that makes sense to you. It is suggested to consider the theoretical basis for every event. One pattern with solid theoretical grounding is to add events that pertain to factual shifts in an individual to that individual&#39;s timeline. While Bowen theory sees all shifts in an individual as related to functional shifts in the family, certain facts of family functioning are observable in individuals.</p>
+
+<p>For example, a series of intense dreams about death may have begun for a child three days following the announcement of a grandparent&#39;s terminal diagnosis. Or a person may have begun college, or had an onset, increase, decrease, remission, relapse, or extinction of a symptom. Or a person may have moved prior to meeting their spouse. Such a shift would be recorded under one person and compared to any recorded shifts in the family system.</p>
+
+<p>Events pertaining to the <em>nuclear family emotional process</em> might be better added to a pair-bond instead of an individual. This is covered in the next section. An event that occurs prior to bonding would make more sense if added to that individual.</p>
+
+<h3 id="toc_24">The Pair-Bond Timeline</h3>
+
+<p>The pair-bond timeline lists all of the events pertaining to the <em>nuclear family emotional process</em> of that pair-bond. In a nutshell, <em>nuclear family emotional process</em> describes the way in which two parents manage tension. This could include when they met, notable events in the bonding process like initial bonding, break-ups, marriage, separation, divorce, moves, etc. It is recommended to read more about <em>nuclear family emotional process</em> in chapter 9 of Bowen&#39;s book <em>Family Therapy in Clinical Practice</em>, most notably pp. 376-377.</p>
+
+<p>There are two ways to mark a Pair-Bond as married, separated, divorced, etc. The preferred way is to add an event under that pair-bond&#39;s timeline and set the &quot;Kind&quot; menu to one of bonded, married, separated, divorced, moved. That will update the diagram appropriately according to the date shown on the diagram. If a date is not known, then it is possible to check one of the &quot;Married&quot;, &quot;Separated&quot;, and &quot;Divorced&quot; checkboxes under the pair-bond properties to at least visuall indicate that the couple was married, separated or divorced at some time. Adding such events will override the checkboxes if appropriate.</p>
+
+<h3 id="toc_25">Visual Timeline</h3>
+
+<p>The visual timeline allows you to get a bird&#39;s-eye view of the family&#39;s history. Looking at the same data in a different way can make it easier to see patterns, whatever that different way may be. The visual timeline lays out the family&#39;s history in a scale-accurate dimension from left to right with the event date, description, and person that the event pertained to. &quot;Nodal&quot; events are drawn with larger circles so they stand out. This view makes obvious when clusters of events occured within close proximity of each other, for example.</p>
+
+<h4 id="toc_26">Date Scroller</h4>
+
+<p><img src="Date%20Slider.gif" alt=""></p>
+
+<p>You can scroll through the timeline of the family as you would a movie file on you computer. Just click anywhere on the visual timeline at the bottom of the diagram to set the date. You can also click and drag to swipe forward and backward through time, or use the arrow keys to jump between dates that incur a visual update to the diagram.</p>
+
+<p>You also expand the visual timeline to conduct a more in-depth chronological analysis of the family. Click on the expand button to make the timeline full size.</p>
+
+<p><img src="Expand%20Timeline.gif" alt=""></p>
+
+<p>Zoom into a particular point on the timeline by holding down the <code>Alt</code> key (Option key on macOS) while scrolling up or down with the trackpad or mouse. You can scroll left and right with the trackpad or mouse wheel, or by holding down the <code>Alt</code> key (Option key on macOS), clicking, and dragging in the same manner you can do on the family diagram view.</p>
+
+<p><img src="Navigate%20Timeline.gif" alt=""></p>
+
+<p>An important function of the visual timeline is to lay cateogries of events on top of each other to expose relationships between the categories. For example, you can compare the timing of births, deaths, pair-bond events, and functioning-oriented events that contribute to family projection, as demonstrated in the following graphic:</p>
+
+<p><img src="Tags-Timeline.gif" alt=""></p>
+
+<h3 id="toc_27">Tracking Variables Through Time</h3>
+
+<p><em>Family Diagram</em> is designed as a research tool because the application of Bowen theory looks more like a research effort than a simplified technique to solve a particular problem. This principle of the research effort applies just as well to the coach or academic family researcher. One important question for any researcher is what variables to track and how to track it (theoretical dilemmas for this question are addressed in the next section).</p>
+
+<p><em>Family Diagram</em> allows you to add your own variables to the family timeline. You can choose whichever variables suit your interests for the family in question. For example, it may be useful to track the onset, fluctuation, and remission of a symptom over time. You may then attempt to relate changes in this variable to changes in the broader system.</p>
+
+<p>To add a new variable, click the <em>Settings</em> button on the right side of the diagram. At the top you will see the variables list. You can click the add button to add a new variable, and double-click the name to rename it. If you navigate back to the timeline view and drag the left side to expand it, you will notice that these variables appear as additional columns. You can double-click on the cell for a particular column to edit it, and hit enter to save your edit.</p>
+
+<p>You can also choose a template to replace all of the variables in the diagram. As of the time of this writing, there are two templates available for existing research models, the Papero model and the Havstad model. <a href="http://www.thebowencenter.org/miva/merchant.mvc?Screen=CTGY&amp;Store_Code=TBC&amp;Category_Code=FSJ-BA">You can read more about these models in issue 13.2 of the <em>Family Systems</em> journal.</a></p>
+
+<p><img src="Manage%20Variables.gif" alt=""></p>
+
+<h3 id="toc_28">Event Tags</h3>
+
+<p>Event tags allow you to filter data in the diagram and timeline. The tag is a ubiquitous concept on the modern internet. Twitter uses hashtags, like #bowentheory, or #naturalsystems. Both of these are event tags with a hash symbol at the beginning of them. Event tags are simply categories that let you filter data. They are used in many different places in <em>Family Diagram</em>, from people, to emotional process symbols, to events.</p>
+
+<p>For example, if you wanted to keep track of who was in a single household you could create a new tag called &quot;household&quot; and check it for each appropriate person. You could do the same for a family business.</p>
+
+<p>Here is a video tutorial covering the concepts in this section:</p>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/du-aw2I3j9o" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+<p>Event tags are considered &quot;metadata&quot; because the are data about data. There is one master list of event tags for the entire diagram file. This means that you are always viewing the same list of event tags regardless of whether you are viewing that list under people, events, emotional process symbols, etc. You can add, delete, or rename event tags from any tag list and the changes will be reflected in every other event tags list in that diagram.</p>
+
+<p>You can add a tag to a few events by editing the tag list in the <em>Meta</em> tab of the property sheet, and then search by tag using the search button like this:</p>
+
+<p><img src="Add%20Tags.gif" alt=""></p>
+
+<p>You add the tag to the item you are editing by clicking the checkbox for that tag while editing that item. For example, to add a particular tag to a particular person, inspect that person, click the <em>Meta</em> tab at the bottom of the person properties sheet, and check the checkbox for the tag you want to add to that person.</p>
+
+<p>If you want to add a tag that does not exist, click the <code>+</code> button. A new tag will appear in the tag list. Double click the new tag to rename it, then click the checkbox if you want to add the tag to the item that you are currently editing.</p>
+
+<p>To reiterate, there is a single list of event tags for the diagram file. If you add a tag in one person&#39;s or event&#39;s property sheet, you will see listed for all other people and events. Checking the tag only pertains to the person(s) or event(s) you are editing.</p>
+
+<blockquote>
+<h3 id="toc_29">Theoretical Dilemmas: Do variables pertain to people, or groups?</h3>
+
+<p>There is a theoretical dilemma at the core of any effort to operationalize a rich model like Bowen theory. That is, what is the proper data model that represents what is described in the theory? Bowen theory describes how the human family is a complex system by defining the <em>emergent properties</em> of that system. That is, the processes which only occur when two or more people are active; They do not occur when one investigates only a single person in isolation. Complex systems science is an emerging multidisciplinary field that studies how best to track properties that are emergent in complex systems. Complex systems science probably manifested formally in the field Biology around the turn of the century (Kitano, 2002). One important question in Bowen theory as a biological theory is; &quot;How does one systematically track the functioning of the family emotional system through time?&quot; As of this writing, there is no clear answer for this question. What variables would be required for such an effort? Would they pertain to individuals or groups? For example, symptoms such as Crohns flare-ups or panic attacks are typically associated with one individual. A geographical move would pertain to each person that moved, but may be associated most importantly with the mating-pair because that is the context in which the level of <code>basic self</code> is established in a developing child. What about when two cousins, an uncle, another aunt, and a grandparent move in with each other and form a family business?</p>
+
+<p>As of this writing, arbitrary events can only be added to individuals and pair-bonds. With the exception of the cutoff symbol, emotional process symbols (described elsewhere in this manual) are associated with either a single individual or two individuals. Geographical move events can be added to a pair-bond representing one mating pair. In the future, it may make sense to associate events on the timeline with arbitrary groups of people. But for now, this remains a theoretical dilemma.</p>
+
+<p>This dilemma is particularly important for <code>Family Diagram</code> because a majority of the app&#39;s code is organized around the principle that each timeline event is associated with a single person. An exception was made for geographical move events being associated with a single pair-bonds, and also for emotional process symbols appearing on the dates that the evidence for them became visible and beacme invisible, (i.e. &quot;began&quot; and &quot;ended&quot;). However, these exceptions add significant complexity to the design and deteriorate from a coherance of the design until a single rule emerges which can accomodate all of these cases while remaining theoretical accurate.</p>
+</blockquote>
+
+<h2 id="toc_30">Emotional Process Symbols</h2>
+
+<p>One of the most useful contributions that <em>Family Diagram</em> makes is the ability to track emotional process over time. <em>Family Diagram</em> accomplishes this through emotional process symbols. But what exactly are &quot;emotional&quot; process symbols?</p>
+
+<p>Emotional process symbols are used to track the <em>functioning</em>, or behavior, of the multigenerational family organism. This is not the same as merely recording <em>structure</em> of the organism, the who, when, and where. <em>Structure</em> is the focus of genology. <em>Structure</em> consists of the names of the system&#39;s components and their static physical relationships. <em>Function</em> refers to change that occurs within the bounds of structure over time. Bowen theory describes the <em>function</em> of the human family.</p>
+
+<p>The 8 concepts of Bowen theory describe human behavior in terms of the transactions that occur between people over tme. Emphasis is placed on transactions which are more automatic than transactions that are thoughtfully planned. &quot;Emotion&quot; in Bowen theory describes the energy for that which is automatic in any living thing. This is not equivalent to &quot;feeling,&quot; which is defined in Bowen theory as that aspect of emotion that humans are aware of an describe use anthropocentric terms, like anger, sadness, and happiness. In other words, &quot;emotion&quot; is any movement that is automatic, from the flow of blood to the movement of an arm. Under this definition, the term emotion applies universally to life as something like &quot;movement that is automatic.&quot;</p>
+
+<p>One way of tracking transactions between humans in a more factual way is to track shifts in processes rather than the content of those processes. For example, tracking when overt conflict began and ended (i.e. shifts in the process) or when there was a marked increase or decrease in that conflict would be more factual than tracking whether the statements made in the conflict (i.e. content of the process) were factual. This is how Bowen theory represents a complex systems way of thinking, and converts subjective content into factual processes. Tracking shifts in process immediately steps out of a reductionistic way of thinking into a complex systems way of thinking.</p>
+
+<p>In <em>Family Diagram</em>, you add a new symbol for each shift in process. Each symbol has a beginning and ending date to mark the beginning and ending of that symbol. You can use the legend at the top of this manual to see the various types of emotional process symbols you can add.</p>
+
+<p>At present, there is no way to modulate the size of emotional process symbols over time. You would need to add another symbol with a different size to show a change in size over time.</p>
+
+<h3 id="toc_31">When to Add a Symbol, and for What</h3>
+
+<p>As described, symbols should have a factual basis. It can be a fact that two people began arguing for the first time on a particular date. It is not necessarily a fact that people argue &quot;because&quot; they are angry at each other, or &quot;because&quot; one started the argument, or &quot;because&quot; they have no choice because of present or historical circumstances. But it can be a fact that an argument occurred.</p>
+
+<p>If an argument occured on a particular date, let&#39;s say Dec 22nd, 2012, with explicit verbalized feelings, you would add a conflict symbol between those people and set both the start and end date to Dec 22nd, 2012. That would make the conflict symbol appear on the timeline for Dec 22nd, 2012 only.</p>
+
+<p>If these two people have a reliable pattern of such conflict, then you can leave the dates out. This leaves the symbol visible on all dates. If these two people had a pattern of avoiding discussing important issues prior to Dec 22nd, 2012, then you would add a distance symbol ending on Dec 22nd, 2012. This would show the distance symbol between these two people prior to Dec 22nd, 2012, and a conflict symbol between them after 2012.</p>
+
+<p>An animated change on the diagram is the effect of setting dates on emotional process symbols. This catches the eye of the observer in a manner not possible without an animated diagram. The real benefit comes when one change happens on or near another change in time. For example, distance may begin between a father and daughter at the same time as the parents separated. Fusion between mother an daughter may also occur at the same time as the separation. Observing multiple visual changes at once activates the brain&#39;s ability for pattern recognition as if it were watching the family from the top of a football stadium. A new view becomes possible as more factual data is entered. Perhaps it was not apparent that the distance between father and daughter occured at the same time as the separation. What new questions would this generate about the way this family utilizes the four anxiety binding mechanisms?</p>
+
+<p>So how do you choose when to put a symbol on the diagram? Add symbols for factual shifts like the ones described above. If dates cannot be estimated, then leave them blank. Enter what you know today, and continually refine the model as you learn more.</p>
+
+<p>Try to avoid interpreting a shift at the time it is entered in the diagram. Interpreting would be assigning a &quot;cause&quot; for the shift, or attempting to derive some meaning or another from it. The goal of this effort is to get objective as possible, to challenge your assumptions so that you can &quot;see what you have not been able to see before, but has been right in front of your eyes.&quot; </p>
+
+<p>Interpretation is important. But interpretation can reenforce old assumptions and limit you to seeing what you have always seen. Merely using theory to interpret what you see without gathering data to challenge that interpretation does not make it possible to see something both new and factual. The core methodological principle of natural science is to gather as much data as possible to disprove an interpretation, and only assume the interpretation is valid when all practical opportunities to disprove it have been exhausted.</p>
+
+<p>The ideal methodology for <em>Family Diagram</em> is simple, but difficult: Simply document a series of facts, then only occasionally step back for a few moments and see what they may mean. Don&#39;t fall into the trap of interpreting too early, with too little evidence. Learn to differentiate between what you know and what you don&#39;t know about a particular family. As the saying goes, <em>it aint what you don&#39;t know that gets you into trouble, it&#39;s what you know for sure that just ain&#39;t so.</em></p>
+
+<p>It appears as though it is a life-long journey to be able to see what is right in front of our eyes all along.</p>
+
+<h3 id="toc_32">Types of Emotional Process Symbols</h3>
+
+<p>Currently there are six main types of emotional process symbols. Entering them factually requires clear definitions. The following are thumbnail-sketch definitions. Comprehensive definitions can be found in Michael Kerr&#39;s two books (1988, 2019).</p>
+
+<p>Conflict, distance, reciprocity, and projection are the four anxiety binding mechanisms in a nuclear family emotional process. All of these terms describe &quot;automatic&quot; behaviors that occur regardless of a person&#39;s desires. They are not pathology but are natural behaviors which manage anxiety. However, they are not always adaptive to a given problem.</p>
+
+<ul>
+<li><em>Conflict</em> is explicit and verbalized, or physical.</li>
+<li><em>Distance</em> is the opposite of conflict, i.e. avoiding important issues.</li>
+<li><em>Reciprocity</em> is where one person develops symptoms by virtue consistently adapting to the other by adopting their opinions, or solving their dilemmas, or simply picking their fork off the floor.</li>
+<li><em>Projection</em> is energetic focus onto a real or imagined problem in another person, typically a child.</li>
+<li><em>Fusion</em> is a very broad term for how two people are functionally dependent. Fusion is simply where change in one person necessitates a change in another and neither have the ability to overcome this with individual choice or action.</li>
+<li><em>Cutoff</em> is where a parent or child terminates communication with the other. It is typically the child who cuts off from the parent.</li>
+</ul>
+
+<p>The above symbols are well-established in Bowen theory theory. There are a few extra symbols which are experimental. This means that they are not as well defined as they may be in the future, and may not exist in the future.</p>
+
+<ul>
+<li><em>Defined-Self</em>: This is one arrow pointing toward one person with another stop symbol putting a stop-wall in the way of the arrow. This may be something like a move that a person makes in a self-determined manner which goes against the patterned opinions/desires/actions of another person. A move to &quot;define self&quot; in relation to another may lead to anxiety, apathy, reactivity, distance, or any of the other predictable behaviors in other areas of the family system.</li>
+<li><em>Alignment</em>: This is two arrows pointing toward each other. This may have something to do with being on the inside of a triangle, being in agreement about another person.</li>
+<li><em>Non-alignment</em>: This is two arrows pointing away from each other. This may have something to do with being on the outside of a triangle, being in disagreement with a person.</li>
+</ul>
+
+<h3 id="toc_33">Adding and Editing Emotional Process Symbols</h3>
+
+<p>Emotional process symbols are added in a similar manner as adding a pair-bond, described previously. First, you click on the appropriate type in the toolbar to enable the add-mode for that type. Then draw the symbol between the two people you want to add it to. This is done by clicking and holding the mouse button in the middle of one person, dragging with the mouse button down until the cursor is in the middle of the second person, and the letting go of the mouse button.</p>
+
+<p>You can inspect emotional process symbols in the same way as all other items on the diagram. If you have many overlapping symbols between two people, hovering the mouse over the symbols will fan them out so that you can select which symbol you want to edit. Click the symbol once to select it, and then either click the &quot;I&quot; in the to toolbar, use the keyboard shortcut cmd-i, or double-click the symbol itself. You can find other keyboard shortcuts for inspecting items in the <em>View</em> menu.</p>
+
+<p><img src="Emotion-Properties.jpg" alt=""></p>
+
+<p>Each emotional process symbol has a start date and an end date. These control when the symbols appear and disappear in the diagram over time. Each symbol also has a unique color that is used to draw its date range in the timeline.</p>
+
+<p>As with other items, you can track details about this emotional process symbol using the <em>Notes</em> tab.</p>
+
+<p>You can also set event tags on emotional process symbols to filter what is shown on the diagram for various use cases. Setting an event tag on the emotional process symbol automatically sets it on it&#39;s start and end events, and vice-versa.</p>
+
+<blockquote>
+<h3 id="toc_34">Theoretical Dilemmas: Triangles</h3>
+
+<p>Traditionally, a paper diagram is used to describe either a basic pattern in the family or one specific part aspect of the basic pattern.  In either case, what is included in the diagram itself is merely a thumbnail-sketch of the emotional process that is typically only elaborated verbally. This limitation is partly a function of the traditional two-dimensional format which can only display so much information at once before it becomes cluttered. This limitation is probably also a function of the cognitive and conceptual capacity of the person drawing the diagram. Thinking beyond one or two moving parts - which amounts to a thumbnail-sketch - in a complex system is an extremely challenging task for any homo sapiens.</p>
+
+<p>Triangles, one of the eight formal concepts of Bowen theory, are then merely inferred from the thumbnail sketches on the two-dimensional diagram. There is currently no formal way track triangles in or outside a family diagram, whether on paper or in this app. The theoretical dilemma that triangles pose for the diagram is whether tracking triangles should be explicitly tracked or whether they should remain merely a topic of verbal discussion?</p>
+
+<p>Two arguments for tracking triangles is that they are &quot;the molecule of the emotional system,&quot; and that they are &quot;predictable&quot; (Bowen, 1978). Perhaps one way toward a data-driven model of the family emotional system would simply be a map of the state of each triangle and how a change in one ripples through changes in the others. If such a model were to be built, a way to track trangles would need to be defined. How best to do this?</p>
+
+<p>One way to accomplish this would be to track the inside and outside positions of every single triangle in the family over time. This would produce something like a &quot;map&quot; of triangle positions. When stress increases in response to a problem, a simulation could make it possible watch the triangles activate in varying degree to manage the stress of the problem. A small change in some triangles would lead to big changes in other triangles, and no changes in other triangles. In any case, a basic pattern could emerge over time with some triangles more reliably implicated in dealing with imoportant problems than others.</p>
+
+<p>But even if this challenge were pursued, how best to represent this in <em>Family Diagram</em>? Include a special visual layer for triangles right on the diagram? What symbols to use for this? Include a tabular view for the state of each triangle at any point in time, somewhat like the timleine? Include a specialized view where you could view the status of one triangle at a time?</p>
+
+<p>How would you solve with this puzzle? Do you think it is even useful to track trangles? if not, how would you operationalize the triangle concept in family research? How would you systematically track the functioning of a family?</p>
+</blockquote>
+
+<p><span></span></p>
+
+<blockquote>
+<h3 id="toc_35">Theoretical Dilemmas: Cutoff</h3>
+
+<p>Emotional cutoff is defined in the literature as termination of communication between the generations. It is a way of managing tension in those relationships. It is not necessarily a bad thing, as the alternative to a particular cutoff may be even worse. However, theory suggests that cutoff negatively influences the developmental pathways available to those who proceed through and after it.</p>
+
+<p>As of this writing, many people use the term &quot;cutoff&quot; in conflicting ways. Some use it to describe zero communication between siblings, or between one person and one or more family members. Others use it interchangably with the term &quot;distance.&quot; It appears clearest in the literature that cutoff means the far-extreme of distance between the generations, i.e. between a person and one or more of their parents. Evidence of cutoff in one generation does sometimes appear in the form of an acceleration of the natural fragmentation that occurs through time between cousins and the offspring of cousins. Despite the different uses in practice, emotional cutoff is one of the eight top-level concepts in Bowen theory, which indicates that icutoff is not merely a vague idea used in many ways. It must have some degree of precision in its definition.</p>
+
+<p><em>Family Diagram</em> currently adopts this latter definition of cutoff that is clearest in the literature, which is zero direct communication between the generations. Unlike the other symbols which always pertain to two people, the <em>Cutoff</em> symbol only pertains to one person to indicate that they have or have had a lapse in commmunication with the previous generation(s) in some form. The fact that a cutoff exists does not depend on who is supposed to have &quot;caused&quot; or perpetuated it.</p>
+
+<p>The theoretical dilemma at play here is how best to represent a person ceasing or inheriting zero direct communication with an entire branch of the family, and then reestablishing communication at a later date. Often a shift like this can lead to functional shifts elsewhere in the system. Broadly speaking, it is not clear how to represent an emotional pattern between one person and a group of people, or between two groups of people. For one thing, the diagram would look messy if such symbols were introduced to accomodate these different cases without some way of organizing them coherently in relation to all the other symbols. It is also unclear how to visually represent such a symbol in a manner that it to automatically moved when dragging the associated people around on the diagram.</p>
+
+<p>Despite this theoretical dilemma, it is possible that you will find a way to use the cutoff symbol that is more useful to you. Maybe you will find a better way to demonstrate the factual observations described above. If so, let us know your thinking so that we can add it to <em>Family Diagram</em>.</p>
+</blockquote>
+
+<h2 id="toc_36">Making Presentations</h2>
+
+<p>There are cases where you may want to show your diagram to others as part of a projected presentation. Presenters often want to make a few points which are not contained in the core data of the family diagram, such as who is in the family business, who lives together, or who were involved in an important event. <em>Diagram Views</em> are used to <em>overlay</em> arbitrary information onto the diagram, and then cycle through the layers to conduct a presentation. <em>Diagram Views</em> are modeled after Adobe Photoshop&#39;s layer system, and allow you to create a new layer for each message that you want to communicate in your case presentation.</p>
+
+<p><img src="Layers%20Demo.gif" alt=""></p>
+
+<h3 id="toc_37">Diagram Views</h3>
+
+<p>The following are some video tutorials covering the concepts in this section on layers. The first video tutorial covers the most basic use of layers to add text callouts and pencil drawings to the diagram:</p>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/2oEN2fv_6IE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+<p><code>Diagram Views</code> operate independently of the timeline, alowing you to animate forward and backward through the timeline at a different pace than animating through the layers.</p>
+
+<p><code>Diagram Views</code> contain text callouts and pencil drawings as well as specialized layered properties for other items such as position, color, emphasis, etc. When you activate a layer, it swaps the properties for each item with the the value stored in that layer.</p>
+
+<p>There are keyboard shortcuts which make it easy to cycle through the layers in the order that they appear in the layers list. This is the primary method of switching layers in presentations because it keeps the diagram clean so the audience can simply focus on the content and not the user interface. To activate the next layer in the list, use <code>⌘-&lt;right-arrow&gt;</code>. To active the previous layer in the list, use <code>⌘-&lt;left-arrow&gt;</code>.</p>
+
+<p>You can rename and drag layers to keep them organized during editing:</p>
+
+<p><img src="Rename%20Layers.gif" alt=""></p>
+
+<h3 id="toc_38">Text Callouts</h3>
+
+<p>Text callouts are bubbles with text like you have seen in comic books. They can contain any text, point to any number of items, and be scaled to any size.</p>
+
+<p>Increase the length of each line in the callout by dragging the right edge of the box. You can make the whole callout bigger or smaller by dragging the lower-right or top-left corner of the callout. Move it slowly so as not to over-scale it.</p>
+
+<p><img src="Add%20Callout.gif" alt=""></p>
+
+<p>One neat trick for Text Callouts is moving the bubble without moving the points. You can do this by holding the <code>Alt</code> key (<code>Option</code> key on macOS) while dragging the bubble, like this:</p>
+
+<p><img src="Anchor-Drag%20Callout.gif" alt=""></p>
+
+<p>You can associate a text callout with a person so that the callout moves when you move the person. You can do this by selecting the callout, inspecting it, then setting a parent person using the dropdown menu.</p>
+
+<h3 id="toc_39">Pencil Drawings</h3>
+
+<p>You may find it useful to draw directly on the diagram to make a point that is not immediately apparent using the standard symbols. For example, there is currently only a symbol to indicate <em>cutoff</em> between a person and their parent(s), but there is not a symbol to indicate termination of communication between a person and anyone other than their parents such as siblings. You can quickly achieve this by drawing a line to indicate this pattern between groups of people, like this:</p>
+
+<p><img src="Add%20Pencil%20Drawing.gif" alt=""></p>
+
+<p>You can delete a pencil stroke like any other item on the diagram. First select the pencil stroke by clicking it or dragging a selection box around several pencil strokes. Then, type &lt;command&gt;-delete to delete it from the diagram.</p>
+
+<p>You can associate a pencil stroke with a person so that the stroke moves when you move the person. You can do this by selecting the stroke or strokes, inspecting it, then setting a parent person using the dropdown menu.</p>
+
+<h3 id="toc_40">Designing Sub-views using Diagram Views</h3>
+
+<p>One use case for layers is to set up a sub-view of a diagram. For example, your diagram may have become quite large and there may be times when you want to focus on your nuclear family instead of your larger geneological project. You can create a layer for your nuclear family and then switch between that layer and the entire family diagram at will.</p>
+
+<p>The steps for this are as follows:</p>
+
+<ol>
+<li>Show the diagram&#39;s <em>Meta</em> properties by clicking the <em>Meta</em> button on the right side of the diagram. This is the button with the three horizontal lines and checkboxes in it.</li>
+<li>Add a new diagram view in the &quot;Diagram Views&quot; list by clicking the add button below it.</li>
+<li>Double-click &quot;View 1&quot; to change the layer name to &quot;Nuclear family.&quot;</li>
+<li>Expand the side drawer a bit to expose the event tags column in the views view.</li>
+<li>Double-click the event tags cell to show the event tags editor for that layer.</li>
+<li>Add a new tag in the &quot;Event Tags&quot; list by clicking the add button at the bottom of it.</li>
+<li>Double-click &quot;New Tag 1&quot; to change the tag name to &quot;Nuclear family,&quot; which matches you already gave to your new layer.</li>
+<li>Click the checkbox for the &quot;Nuclear family&quot; tag.</li>
+<li>Click the &quot;Done&quot; button under the list of event tags.</li>
+<li>Select all of the items on the diagram that you want to include in your new layer.</li>
+<li>Click the inspect button to inspect the selected people.</li>
+<li>Check the box for our new tag in the <em>Meta</em> box of the person properties.</li>
+<li>Do the same for any emotional process symbols that you may want to include in the layer.</li>
+<li>Activate the layer by clicking the &quot;Activate&quot; checkbox next to your new layer back in the layer list. This will hide any items that you did not set the tag on.</li>
+</ol>
+
+<p><img src="Add%20Sub-View%20Using%20Layer.gif" alt=""></p>
+
+<p>There are a lot of different things happening here.</p>
+
+<p>First, layers themselves do not show and hide items on the diagram, this is the function of event tags. Therefore, the event tags must be set on the layer so that the layer can use them to determine what should be shown and hidden when the layer is activated and deactivated. In this example you only added a single tag to a single layer, and even gave them both the same name of &quot;Nuclear family.&quot; If this seemed redundant to you, then you were correct for this case. However, there may be cases where you may want to add multiple event tags to a single layer. The app is designed for maximum flexibility to allow family researchers to use it in new and unexpected ways!</p>
+
+<p>Second, while a tag was set on the layer to show and hide people, various properties are stored on the item itself. These properties include position, color, and size, and deemphasis. When you activate and deactivate a layer, each item in it reverts back to using the values it had the last time the layer was activated. For example, if you activate your &quot;Nuclear family,&quot; drag the people in the family around, then deactivate the layer, you will notice that each person that you moved animates back into their default position. This is because changes to layered properties, visible in the &quot;Meta&quot; tab in that item&#39;s property sheet, are stored in the active layer. If there is no active layer, they are stored in the item&#39;s default properties.</p>
+
+<p>Third, callouts and drawings are stored in layers. You can choose which layers a particular callout and drawing resides in by inspecting them and checking those layers in the list.</p>
+
+<p>Click &quot;Store Geometry&quot; for the layer to remember size and position settings for each item on the diagram. If you choose, you may later uncheck &quot;Store Geometry&quot; for that layer which will revert the size and position settings to match the default view. <em>IMPORTANT: If you move items around while this layer is active and you don&#39;t have this checkbox checked, then you will also be moving items around in your default view!</em></p>
+
+<p>You can set up as many views as you want. If you organize your views like powerpoint slides, then you can use the &quot;Next View&quot; and &quot;Previous View&quot; buttons in the top toolbar to move through your views like slides in a presentation without the views drawer open. This is a very effective way to present a family case without using a purely data-centric approach.</p>
+
+<p>Here is a video explaining these concepts:</p>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/2oEN2fv_6IE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+<blockquote>
+<h3 id="toc_41">Theoretical Dilemmas: Theory VS Presentation</h3>
+
+<p>Early in the development of <em>Family Diagram</em>, a user asked if it would be possible to make people appear with a specific color. The user was interested in showing who was and who was not in the family business. While it is not hard to make a case for the importance of this kind of information, simply adding the ability to assign colors to people introduces an ambiguity in the meaning of the colors. What is the theoretical argument for designating one group within the broader system? Does an arbitrary sub-group designation possess a clearly-defined relationship with every other design decision of the app? What would someone unfamiliar with this person&#39;s use of a particular color make of the diagram? Does this detract from a well-principled standard for the family diagram concept? It is possible that the <code>genogram</code> became such a hodge-podge concept from appending various data without understanding what place the new data types had in the larger theoretical system. The genogram then lost its grounding in any one evolving theoretical system leaving its function to be decided by each person using it.</p>
+
+<p>Diagram Views were designed to avoid these dilemmas. Views function to separate what is theoretically sound from the point that a presenter is trying to make at any point in time. The term <em>layer</em> is accurate in the sense that it contains ideas that are superimposed on top of what is described in Bowen theory. This theoretical dilemma of deciding what new features are worthy of integration into the basic features of the app and which are merely presentation details is inherent in the development of <em>Family Diagram</em>. It is for this reason that it must be developed in contact with long-time students of Bowen theory who are able to critique and refine these design principles and their theoretical consistency.</p>
+</blockquote>
+
+<h2 id="toc_42">Research Server</h2>
+
+<p>(NOTE: The research server is currently disabled for public use.)</p>
+
+<p>The app connects to a research server which contains a curated list of family diagrams contributed by fellow users. These diagrams are anonymized unless explicitly saved to use the real names, or to require a password to see the real names.</p>
+
+<p>Perusing existing cases can provide a way to become familiar with the way families adapt in general. For example, it may be possible to bring a hypothesis to a series of family cases and see if any of the data from available cases contradict it.</p>
+
+<h3 id="toc_43">Using the Research Server</h3>
+
+<p>To use the research server, click the cloud icon at the bottom of the home/file browser screen. This will show a list of diagrams that you can open and view. You won&#39;t be able to change any of the data on the diagram or save it to a file, but you can view it all you like.</p>
+
+<h3 id="toc_44">Contributing to the Research Server</h3>
+
+<p>If you choose, you can contribute a family diagram to the research server. The research server can also be used to share diagrams for presentations. You are responsible for understanding any ethical obligations you may have to maintain confidentiality for the information contained in a contributed diagram.</p>
+
+<p>To contribute a diagram to the research server, open the diagram settings by clicking the gear icon on the right side of the window. Then scroll down and click &quot;Contribute to research&quot;. The diagram will be assigned an alias and registered with the server. It will not be available to other users of the app until it is approved by <em>Family Diagram</em> staff.</p>
+
+<p>All names are replaced with aliases by default to protect the identities of the users. However, this process does not work perfectly when applied to event descriptions and note fields in all items. You should therefore take care when entering data. You can test this anonymization using the &quot;Hide names&quot; function in the diagram and scanning through events and notes fields for identifying information.</p>
+
+<p>If you choose, you can click &quot;Show real names&quot; to show the real names of the people in the diagram. Additionally, you can click &quot;Require password for real names&quot; to prevent showing real names to people until they disable the &quot;Hide Real Names&quot; on their read-only copy and enter the password that is automatically generated next to the &quot;Require password for real names&quot; checkbox.</p>
+
+<h2 id="toc_45">References</h2>
+
+<p>Kerr, M., &amp; Bowen, M. (1988). <em>Family evaluation: The role of the family as an emotional unit that governs individual behavior and development.</em> New York, NY: W. W. Norton.</p>
+
+<p>Kerr, M. (2019). <em>Bowen theorys secrets: revealing the hidden life of families.</em> New York: W.W. Norton &amp; Company.</p>
+
+<p>Kitano, H. (2002, Mar 1). <em>Systems biology: A brief overview</em>. Science, 295(5560), 1662–1664. doi:10.1126/science.1069492</p>
+
+<h2 id="toc_46">Support</h2>
+
+<p>Please submit support requests here: <a href="https://vedanamedia.com/our-products/family-diagram/support/">Contact &amp; Support - Vedanā Media</a>.</p>
+
+<p>(C) 2020, Vedana Media</p>
+
+
+
+<script type="text/javascript">
+var _self="undefined"!=typeof window?window:"undefined"!=typeof WorkerGlobalScope&&self instanceof WorkerGlobalScope?self:{},Prism=function(){var e=/\blang(?:uage)?-(\w+)\b/i,t=0,n=_self.Prism={util:{encode:function(e){return e instanceof a?new a(e.type,n.util.encode(e.content),e.alias):"Array"===n.util.type(e)?e.map(n.util.encode):e.replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/\u00a0/g," ")},type:function(e){return Object.prototype.toString.call(e).match(/\[object (\w+)\]/)[1]},objId:function(e){return e.__id||Object.defineProperty(e,"__id",{value:++t}),e.__id},clone:function(e){var t=n.util.type(e);switch(t){case"Object":var a={};for(var r in e)e.hasOwnProperty(r)&&(a[r]=n.util.clone(e[r]));return a;case"Array":return e.map&&e.map(function(e){return n.util.clone(e)})}return e}},languages:{extend:function(e,t){var a=n.util.clone(n.languages[e]);for(var r in t)a[r]=t[r];return a},insertBefore:function(e,t,a,r){r=r||n.languages;var l=r[e];if(2==arguments.length){a=arguments[1];for(var i in a)a.hasOwnProperty(i)&&(l[i]=a[i]);return l}var o={};for(var s in l)if(l.hasOwnProperty(s)){if(s==t)for(var i in a)a.hasOwnProperty(i)&&(o[i]=a[i]);o[s]=l[s]}return n.languages.DFS(n.languages,function(t,n){n===r[e]&&t!=e&&(this[t]=o)}),r[e]=o},DFS:function(e,t,a,r){r=r||{};for(var l in e)e.hasOwnProperty(l)&&(t.call(e,l,e[l],a||l),"Object"!==n.util.type(e[l])||r[n.util.objId(e[l])]?"Array"!==n.util.type(e[l])||r[n.util.objId(e[l])]||(r[n.util.objId(e[l])]=!0,n.languages.DFS(e[l],t,l,r)):(r[n.util.objId(e[l])]=!0,n.languages.DFS(e[l],t,null,r)))}},plugins:{},highlightAll:function(e,t){var a={callback:t,selector:'code[class*="language-"], [class*="language-"] code, code[class*="lang-"], [class*="lang-"] code'};n.hooks.run("before-highlightall",a);for(var r,l=a.elements||document.querySelectorAll(a.selector),i=0;r=l[i++];)n.highlightElement(r,e===!0,a.callback)},highlightElement:function(t,a,r){for(var l,i,o=t;o&&!e.test(o.className);)o=o.parentNode;o&&(l=(o.className.match(e)||[,""])[1],i=n.languages[l]),t.className=t.className.replace(e,"").replace(/\s+/g," ")+" language-"+l,o=t.parentNode,/pre/i.test(o.nodeName)&&(o.className=o.className.replace(e,"").replace(/\s+/g," ")+" language-"+l);var s=t.textContent,u={element:t,language:l,grammar:i,code:s};if(!s||!i)return n.hooks.run("complete",u),void 0;if(n.hooks.run("before-highlight",u),a&&_self.Worker){var c=new Worker(n.filename);c.onmessage=function(e){u.highlightedCode=e.data,n.hooks.run("before-insert",u),u.element.innerHTML=u.highlightedCode,r&&r.call(u.element),n.hooks.run("after-highlight",u),n.hooks.run("complete",u)},c.postMessage(JSON.stringify({language:u.language,code:u.code,immediateClose:!0}))}else u.highlightedCode=n.highlight(u.code,u.grammar,u.language),n.hooks.run("before-insert",u),u.element.innerHTML=u.highlightedCode,r&&r.call(t),n.hooks.run("after-highlight",u),n.hooks.run("complete",u)},highlight:function(e,t,r){var l=n.tokenize(e,t);return a.stringify(n.util.encode(l),r)},tokenize:function(e,t){var a=n.Token,r=[e],l=t.rest;if(l){for(var i in l)t[i]=l[i];delete t.rest}e:for(var i in t)if(t.hasOwnProperty(i)&&t[i]){var o=t[i];o="Array"===n.util.type(o)?o:[o];for(var s=0;s<o.length;++s){var u=o[s],c=u.inside,g=!!u.lookbehind,h=!!u.greedy,f=0,d=u.alias;u=u.pattern||u;for(var p=0;p<r.length;p++){var m=r[p];if(r.length>e.length)break e;if(!(m instanceof a)){u.lastIndex=0;var y=u.exec(m),v=1;if(!y&&h&&p!=r.length-1){var b=r[p+1].matchedStr||r[p+1],k=m+b;if(p<r.length-2&&(k+=r[p+2].matchedStr||r[p+2]),u.lastIndex=0,y=u.exec(k),!y)continue;var w=y.index+(g?y[1].length:0);if(w>=m.length)continue;var _=y.index+y[0].length,P=m.length+b.length;if(v=3,P>=_){if(r[p+1].greedy)continue;v=2,k=k.slice(0,P)}m=k}if(y){g&&(f=y[1].length);var w=y.index+f,y=y[0].slice(f),_=w+y.length,S=m.slice(0,w),O=m.slice(_),j=[p,v];S&&j.push(S);var A=new a(i,c?n.tokenize(y,c):y,d,y,h);j.push(A),O&&j.push(O),Array.prototype.splice.apply(r,j)}}}}}return r},hooks:{all:{},add:function(e,t){var a=n.hooks.all;a[e]=a[e]||[],a[e].push(t)},run:function(e,t){var a=n.hooks.all[e];if(a&&a.length)for(var r,l=0;r=a[l++];)r(t)}}},a=n.Token=function(e,t,n,a,r){this.type=e,this.content=t,this.alias=n,this.matchedStr=a||null,this.greedy=!!r};if(a.stringify=function(e,t,r){if("string"==typeof e)return e;if("Array"===n.util.type(e))return e.map(function(n){return a.stringify(n,t,e)}).join("");var l={type:e.type,content:a.stringify(e.content,t,r),tag:"span",classes:["token",e.type],attributes:{},language:t,parent:r};if("comment"==l.type&&(l.attributes.spellcheck="true"),e.alias){var i="Array"===n.util.type(e.alias)?e.alias:[e.alias];Array.prototype.push.apply(l.classes,i)}n.hooks.run("wrap",l);var o="";for(var s in l.attributes)o+=(o?" ":"")+s+'="'+(l.attributes[s]||"")+'"';return"<"+l.tag+' class="'+l.classes.join(" ")+'" '+o+">"+l.content+"</"+l.tag+">"},!_self.document)return _self.addEventListener?(_self.addEventListener("message",function(e){var t=JSON.parse(e.data),a=t.language,r=t.code,l=t.immediateClose;_self.postMessage(n.highlight(r,n.languages[a],a)),l&&_self.close()},!1),_self.Prism):_self.Prism;var r=document.currentScript||[].slice.call(document.getElementsByTagName("script")).pop();return r&&(n.filename=r.src,document.addEventListener&&!r.hasAttribute("data-manual")&&document.addEventListener("DOMContentLoaded",n.highlightAll)),_self.Prism}();"undefined"!=typeof module&&module.exports&&(module.exports=Prism),"undefined"!=typeof global&&(global.Prism=Prism);
+</script>
+
+
+</body>
+
+</html>
