@@ -495,24 +495,24 @@ You can also set event tags on emotional process symbols to filter what is shown
 
 ## Making Presentations
 
-There are cases where you may want to show your diagram to others as part of a projected presentation. Presenters often want to make a few points which are not contained in the core data of the family diagram, such as who is in the family business, who lives together, or who were involved in an important event. *Diagram Views* are used to *overlay* arbitrary information onto the diagram, and then cycle through the layers to conduct a presentation. *Diagram Views* are modeled after Adobe Photoshop's layer system, and allow you to create a new layer for each message that you want to communicate in your case presentation.
+There are cases where you may want to show your diagram to others as part of a projected presentation. Presenters often want to make a few points which are not contained in the core data of the family diagram, such as who is in the family business, who lives together, or who were involved in an important event. *Diagram Views* are used to *overlay* arbitrary information onto the diagram, and then cycle through the views to conduct a presentation. *Diagram Views* are modeled after Adobe Photoshop's layer system, and allow you to create a new view for each message that you want to communicate in your case presentation.
 
 ![](Layers Demo.gif)
 
 
 ### Diagram Views
 
-The following are some video tutorials covering the concepts in this section on layers. The first video tutorial covers the most basic use of layers to add text callouts and pencil drawings to the diagram:
+The following are some video tutorials covering the concepts in this section on views. The first video tutorial covers the most basic use of views to add text callouts and pencil drawings to the diagram:
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/2oEN2fv_6IE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
-`Diagram Views` operate independently of the timeline, alowing you to animate forward and backward through the timeline at a different pace than animating through the layers.
+`Diagram Views` operate independently of the timeline, alowing you to animate forward and backward through the timeline at a different pace than animating through the views.
 
-`Diagram Views` contain text callouts and pencil drawings as well as specialized layered properties for other items such as position, color, emphasis, etc. When you activate a layer, it swaps the properties for each item with the the value stored in that layer.
+`Diagram Views` contain text callouts and pencil drawings as well as specialized view properties for other items such as position, color, emphasis, etc. When you activate a view, it swaps the properties for each item with the the value stored in that view.
 
-There are keyboard shortcuts which make it easy to cycle through the layers in the order that they appear in the layers list. This is the primary method of switching layers in presentations because it keeps the diagram clean so the audience can simply focus on the content and not the user interface. To activate the next layer in the list, use `⌘-<right-arrow>`. To active the previous layer in the list, use `⌘-<left-arrow>`.
+There are keyboard shortcuts which make it easy to cycle through the views in the order that they appear in the views list. This is the primary method of switching views in presentations because it keeps the diagram clean so the audience can simply focus on the content and not the user interface. To activate the next view in the list, use `⌘-<right-arrow>`. To active the previous view in the list, use `⌘-<left-arrow>`.
 
-You can rename and drag layers to keep them organized during editing:
+You can rename and drag views to keep them organized during editing:
 
 ![](Rename Layers.gif)
 
@@ -542,36 +542,36 @@ You can associate a pencil stroke with a person so that the stroke moves when yo
 
 ### Designing Sub-views using Diagram Views
 
-One use case for layers is to set up a sub-view of a diagram. For example, your diagram may have become quite large and there may be times when you want to focus on your nuclear family instead of your larger geneological project. You can create a layer for your nuclear family and then switch between that layer and the entire family diagram at will.
+One use case for views is to set up a sub-view of a diagram. For example, your diagram may have become quite large and there may be times when you want to focus on your nuclear family instead of your larger geneological project. You can create a view for your nuclear family and then switch between that view and the entire family diagram at will.
 
 The steps for this are as follows:
 
 1. Show the diagram's *Meta* properties by clicking the *Meta* button on the right side of the diagram. This is the button with the three horizontal lines and checkboxes in it.
 2. Add a new diagram view in the "Diagram Views" list by clicking the add button below it.
-3. Double-click "View 1" to change the layer name to "Nuclear family."
+3. Double-click "View 1" to change the view name to "Nuclear family."
 4. Expand the side drawer a bit to expose the event tags column in the views view.
-5. Double-click the event tags cell to show the event tags editor for that layer.
+5. Double-click the event tags cell to show the event tags editor for that view.
 6. Add a new tag in the "Event Tags" list by clicking the add button at the bottom of it.
-7. Double-click "New Tag 1" to change the tag name to "Nuclear family," which matches you already gave to your new layer.
+7. Double-click "New Tag 1" to change the tag name to "Nuclear family," which matches you already gave to your new view.
 8. Click the checkbox for the "Nuclear family" tag.
 9. Click the "Done" button under the list of event tags.
-10. Select all of the items on the diagram that you want to include in your new layer.
+10. Select all of the items on the diagram that you want to include in your new view.
 11. Click the inspect button to inspect the selected people.
 12. Check the box for our new tag in the *Meta* box of the person properties.
-13. Do the same for any emotional process symbols that you may want to include in the layer.
-13. Activate the layer by clicking the "Activate" checkbox next to your new layer back in the layer list. This will hide any items that you did not set the tag on.
+13. Do the same for any emotional process symbols that you may want to include in the view.
+13. Activate the view by clicking the "Activate" checkbox next to your new view back in the view list. This will hide any items that you did not set the tag on.
 
 ![](Add Sub-View Using Layer.gif)
 
 There are a lot of different things happening here.
 
-First, layers themselves do not show and hide items on the diagram, this is the function of event tags. Therefore, the event tags must be set on the layer so that the layer can use them to determine what should be shown and hidden when the layer is activated and deactivated. In this example you only added a single tag to a single layer, and even gave them both the same name of "Nuclear family." If this seemed redundant to you, then you were correct for this case. However, there may be cases where you may want to add multiple event tags to a single layer. The app is designed for maximum flexibility to allow family researchers to use it in new and unexpected ways!
+First, views themselves do not show and hide items on the diagram, this is the function of event tags. Therefore, the event tags must be set on the view so that the view can use them to determine what should be shown and hidden when the view is activated and deactivated. In this example you only added a single tag to a single view, and even gave them both the same name of "Nuclear family." If this seemed redundant to you, then you were correct for this case. However, there may be cases where you may want to add multiple event tags to a single view. The app is designed for maximum flexibility to allow family researchers to use it in new and unexpected ways!
 
-Second, while a tag was set on the layer to show and hide people, various properties are stored on the item itself. These properties include position, color, and size, and deemphasis. When you activate and deactivate a layer, each item in it reverts back to using the values it had the last time the layer was activated. For example, if you activate your "Nuclear family," drag the people in the family around, then deactivate the layer, you will notice that each person that you moved animates back into their default position. This is because changes to layered properties, visible in the "Meta" tab in that item's property sheet, are stored in the active layer. If there is no active layer, they are stored in the item's default properties.
+Second, while a tag was set on the view to show and hide people, various properties are stored on the item itself. These properties include position, color, and size, and deemphasis. When you activate and deactivate a view, each item in it reverts back to using the values it had the last time the view was activated. For example, if you activate your "Nuclear family," drag the people in the family around, then deactivate the view, you will notice that each person that you moved animates back into their default position. This is because changes to view properties, visible in the "Meta" tab in that item's property sheet, are stored in the active view. If there is no active view, they are stored in the item's default properties.
 
-Third, callouts and drawings are stored in layers. You can choose which layers a particular callout and drawing resides in by inspecting them and checking those layers in the list.
+Third, callouts and drawings are stored in views. You can choose which views a particular callout and drawing resides in by inspecting them and checking those views in the list.
 
-Click "Store Geometry" for the layer to remember size and position settings for each item on the diagram. If you choose, you may later uncheck "Store Geometry" for that layer which will revert the size and position settings to match the default view. *IMPORTANT: If you move items around while this layer is active and you don't have this checkbox checked, then you will also be moving items around in your default view!*
+Click "Store Geometry" for the view to remember size and position settings for each item on the diagram. If you choose, you may later uncheck "Store Geometry" for that view which will revert the size and position settings to match the default view. *IMPORTANT: If you move items around while this view is active and you don't have this checkbox checked, then you will also be moving items around in your default view!*
 
 You can set up as many views as you want. If you organize your views like powerpoint slides, then you can use the "Next View" and "Previous View" buttons in the top toolbar to move through your views like slides in a presentation without the views drawer open. This is a very effective way to present a family case without using a purely data-centric approach.
 
@@ -582,7 +582,7 @@ Here is a video explaining these concepts:
 > ### Theoretical Dilemmas: Theory VS Presentation
 > Early in the development of *Family Diagram*, a user asked if it would be possible to make people appear with a specific color. The user was interested in showing who was and who was not in the family business. While it is not hard to make a case for the importance of this kind of information, simply adding the ability to assign colors to people introduces an ambiguity in the meaning of the colors. What is the theoretical argument for designating one group within the broader system? Does an arbitrary sub-group designation possess a clearly-defined relationship with every other design decision of the app? What would someone unfamiliar with this person's use of a particular color make of the diagram? Does this detract from a well-principled standard for the family diagram concept? It is possible that the `genogram` became such a hodge-podge concept from appending various data without understanding what place the new data types had in the larger theoretical system. The genogram then lost its grounding in any one evolving theoretical system leaving its function to be decided by each person using it.
 > 
-> Diagram Views were designed to avoid these dilemmas. Views function to separate what is theoretically sound from the point that a presenter is trying to make at any point in time. The term *layer* is accurate in the sense that it contains ideas that are superimposed on top of what is described in Bowen theory. This theoretical dilemma of deciding what new features are worthy of integration into the basic features of the app and which are merely presentation details is inherent in the development of *Family Diagram*. It is for this reason that it must be developed in contact with long-time students of Bowen theory who are able to critique and refine these design principles and their theoretical consistency.
+> Diagram Views were designed to avoid these dilemmas. Views function to separate what is theoretically sound from the point that a presenter is trying to make at any point in time. The term *view* is accurate in the sense that it contains ideas that are superimposed on top of what is described in Bowen theory. This theoretical dilemma of deciding what new features are worthy of integration into the basic features of the app and which are merely presentation details is inherent in the development of *Family Diagram*. It is for this reason that it must be developed in contact with long-time students of Bowen theory who are able to critique and refine these design principles and their theoretical consistency.
 
 ## Research Server
 
