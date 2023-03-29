@@ -618,4 +618,4 @@ Kitano, H. (2002, Mar 1). *Systems biology: A brief overview*. Science, 295(5560
 
 Please submit support requests here: [Contact & Support - Vedanā Media](https://vedanamedia.com/our-products/family-diagram/support/).
 
-(C) 2020, Vedana Media
+(C) 2023, Vedana Media
